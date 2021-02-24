@@ -45,7 +45,10 @@ import { regexp } from '@wordpress/shortcode';
  * Internal dependencies
  */
 import Autocomplete from '../autocomplete';
-import { useBlockEditContext } from '../block-edit';
+import {
+	useBlockEditContext,
+	useOnCaretVerticalPositionChange,
+} from '../block-edit';
 import { RemoveBrowserShortcuts } from './remove-browser-shortcuts';
 import { filePasteHandler } from './file-paste-handler';
 import FormatToolbarContainer from './format-toolbar-container';
@@ -154,11 +157,8 @@ function RichTextWrapper(
 	identifier = identifier || instanceId;
 
 	const fallbackRef = useRef();
-	const {
-		clientId,
-		onCaretVerticalPositionChange,
-		isSelected: blockIsSelected,
-	} = useBlockEditContext();
+	const onCaretVerticalPositionChange = useOnCaretVerticalPositionChange();
+	const { clientId, isSelected: blockIsSelected } = useBlockEditContext();
 	const selector = ( select ) => {
 		const {
 			isCaretWithinFormattedText,

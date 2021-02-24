@@ -598,7 +598,11 @@ _Returns_
 
 <a name="useBlockEditContext" href="#useBlockEditContext">#</a> **useBlockEditContext**
 
-Undocumented declaration.
+A hook that returns the block edit context.
+
+_Returns_
+
+-   `Object`: Block edit context
 
 <a name="useBlockProps" href="#useBlockProps">#</a> **useBlockProps**
 

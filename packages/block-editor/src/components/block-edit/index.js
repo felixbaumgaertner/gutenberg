@@ -2,9 +2,13 @@
  * Internal dependencies
  */
 import Edit from './edit';
-import { BlockClientIdProvider, useBlockEditContext } from './context';
+import {
+	BlockClientIdProvider,
+	useBlockEditContext,
+	useOnCaretVerticalPositionChange,
+} from './context';
 
-export { useBlockEditContext };
+export { useBlockEditContext, useOnCaretVerticalPositionChange };
 
 export default function BlockEdit( props ) {
 	return (
